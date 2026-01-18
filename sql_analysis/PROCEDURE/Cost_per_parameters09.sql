@@ -1,6 +1,5 @@
 DELIMITER $$
 
--- Gender Analysis 2009
 CREATE PROCEDURE CompareGenderByDisease_2009(IN v_gender_disease VARCHAR(50))
 BEGIN
     SET @sql = CONCAT(
@@ -16,7 +15,6 @@ BEGIN
     PREPARE stmt FROM @sql; EXECUTE stmt; DEALLOCATE PREPARE stmt;
 END$$
 
--- Age Analysis 2009 (Updated to 2009 base year)
 CREATE PROCEDURE AnalyzeAgeByDisease_2009(IN v_age_disease VARCHAR(50))
 BEGIN
     SET @sql = CONCAT(
@@ -39,7 +37,6 @@ BEGIN
     PREPARE stmt FROM @sql; EXECUTE stmt; DEALLOCATE PREPARE stmt;
 END$$
 
--- State Analysis 2009
 CREATE PROCEDURE AnalyzeStateByDisease_2009(IN v_state_disease VARCHAR(50))
 BEGIN
     SET @sql = CONCAT(
