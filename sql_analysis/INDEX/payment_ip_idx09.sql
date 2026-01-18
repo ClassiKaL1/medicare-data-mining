@@ -1,0 +1,1 @@
+CREATE INDEX payment_ip_idx09 ON beneficiarysummarysample_2009 (payment_inpatient);

@@ -1,0 +1,1 @@
+CREATE INDEX stroke_idx09 ON beneficiarysummarysample_2009 (stroke);
