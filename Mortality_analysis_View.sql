@@ -1,3 +1,9 @@
+-- ==========================================
+-- PACKAGE: MEDICARE_DATA_MINING_TOOLS
+-- Description: This view aggregates data for all 11 chronic diseases, comparing patient counts and costs between alive and deceased status
+-- Author: [Nick Kalligeris]
+-- ==========================================
+
 CREATE OR REPLACE VIEW Mortality_analysis_View AS
 	SELECT 'diabetes' AS Disease, 
 		   CASE WHEN death_date IS NOT NULL AND death_date <> '' AND death_date <> '  ' THEN 'Deceased' ELSE 'Alive' END AS Status,
