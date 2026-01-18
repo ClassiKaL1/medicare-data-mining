@@ -1,0 +1,1 @@
+CREATE INDEX cancer_idx ON beneficiarysummarysample_2008 (cancer);

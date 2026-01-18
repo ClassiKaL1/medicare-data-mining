@@ -1,0 +1,1 @@
+CREATE INDEX kidney_disease_idx ON beneficiarysummarysample_2008 (chronic_kidney_disease);

@@ -1,0 +1,1 @@
+CREATE INDEX birth_date_idx ON beneficiarysummarysample_2008 (birth_date);

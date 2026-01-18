@@ -1,0 +1,1 @@
+CREATE INDEX county_code_idx ON beneficiarysummarysample_2008 (county_code);

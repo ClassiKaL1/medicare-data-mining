@@ -1,0 +1,1 @@
+CREATE INDEX osteoporosis_idx ON beneficiarysummarysample_2008 (osteoporosis);
