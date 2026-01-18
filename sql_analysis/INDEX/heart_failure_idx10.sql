@@ -1,0 +1,1 @@
+CREATE INDEX heart_failure_idx10 ON beneficiarysummarysample_2010 (congestive_heart_failure);
