@@ -4,7 +4,7 @@
 -- Author: [Nick Kalligeris]
 -- ==========================================
 
-CREATE OR REPLACE VIEW Costly_diseases_view AS
+CREATE OR REPLACE VIEW Costly_diseases_view08 AS
 	SELECT 'alzheimers_disease' AS Disease, ROUND(AVG(payment_inpatient + payment_outpatient), 2) AS Avg_Total_Cost 
 	FROM beneficiarysummarysample_2008 
 	WHERE alzheimers_disease = 1
