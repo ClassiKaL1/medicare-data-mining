@@ -1,3 +1,9 @@
+-- ==========================================
+-- PACKAGE: MEDICARE_DATA_MINING_TOOLS
+-- Description: Creation of view for finding the costliest diseases for alive and deceased.
+-- Author: [Nick Kalligeris]
+-- ==========================================
+
 CREATE OR REPLACE VIEW Mortality_analysis_View09 AS
     SELECT 'diabetes' AS Disease, 
            CASE WHEN death_date IS NOT NULL AND death_date <> '' AND death_date <> '  ' THEN 'Deceased' ELSE 'Alive' END AS Status,
