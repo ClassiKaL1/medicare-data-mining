@@ -1,11 +1,11 @@
-CREATE OR REPLACE VIEW Mortality_analysis_View10 AS
-	SELECT 'diabetes' AS Disease, 
+CREATE OR REPLACE VIEW Mortality_analysis_View08 AS
+    SELECT 'diabetes' AS Disease, 
            CASE WHEN death_date IS NOT NULL AND death_date <> '' AND death_date <> '  ' THEN 'Deceased' ELSE 'Alive' END AS Status,
            COUNT(*) AS Patient_Count,
            ROUND(AVG(COALESCE(payment_inpatient, 0)), 2) AS Avg_Inpatient_Cost,
            ROUND(AVG(COALESCE(payment_outpatient, 0)), 2) AS Avg_Outpatient_Cost,
            ROUND(AVG(COALESCE(payment_inpatient, 0) + COALESCE(payment_outpatient, 0)), 2) AS Total_Avg_Cost
-    FROM beneficiarysummarysample_2010 
+    FROM beneficiarysummarysample_2008 
     WHERE diabetes = 1 
     GROUP BY Status
 
@@ -17,7 +17,7 @@ CREATE OR REPLACE VIEW Mortality_analysis_View10 AS
            ROUND(AVG(COALESCE(payment_inpatient, 0)), 2) AS Avg_Inpatient_Cost,
            ROUND(AVG(COALESCE(payment_outpatient, 0)), 2) AS Avg_Outpatient_Cost,
            ROUND(AVG(COALESCE(payment_inpatient, 0) + COALESCE(payment_outpatient, 0)), 2) AS Total_Avg_Cost
-    FROM beneficiarysummarysample_2010 
+    FROM beneficiarysummarysample_2008 
     WHERE cancer = 1 
     GROUP BY Status
 
@@ -29,7 +29,7 @@ CREATE OR REPLACE VIEW Mortality_analysis_View10 AS
            ROUND(AVG(COALESCE(payment_inpatient, 0)), 2) AS Avg_Inpatient_Cost,
            ROUND(AVG(COALESCE(payment_outpatient, 0)), 2) AS Avg_Outpatient_Cost,
            ROUND(AVG(COALESCE(payment_inpatient, 0) + COALESCE(payment_outpatient, 0)), 2) AS Total_Avg_Cost
-    FROM beneficiarysummarysample_2010 
+    FROM beneficiarysummarysample_2008 
     WHERE congestive_heart_failure = 1 
     GROUP BY Status
 
@@ -41,7 +41,7 @@ CREATE OR REPLACE VIEW Mortality_analysis_View10 AS
            ROUND(AVG(COALESCE(payment_inpatient, 0)), 2) AS Avg_Inpatient_Cost,
            ROUND(AVG(COALESCE(payment_outpatient, 0)), 2) AS Avg_Outpatient_Cost,
            ROUND(AVG(COALESCE(payment_inpatient, 0) + COALESCE(payment_outpatient, 0)), 2) AS Total_Avg_Cost
-    FROM beneficiarysummarysample_2010 
+    FROM beneficiarysummarysample_2008 
     WHERE alzheimers_disease = 1 
     GROUP BY Status
 
@@ -53,7 +53,7 @@ CREATE OR REPLACE VIEW Mortality_analysis_View10 AS
            ROUND(AVG(COALESCE(payment_inpatient, 0)), 2) AS Avg_Inpatient_Cost,
            ROUND(AVG(COALESCE(payment_outpatient, 0)), 2) AS Avg_Outpatient_Cost,
            ROUND(AVG(COALESCE(payment_inpatient, 0) + COALESCE(payment_outpatient, 0)), 2) AS Total_Avg_Cost
-    FROM beneficiarysummarysample_2010 
+    FROM beneficiarysummarysample_2008 
     WHERE chronic_kidney_disease = 1 
     GROUP BY Status
 
@@ -65,7 +65,7 @@ CREATE OR REPLACE VIEW Mortality_analysis_View10 AS
            ROUND(AVG(COALESCE(payment_inpatient, 0)), 2) AS Avg_Inpatient_Cost,
            ROUND(AVG(COALESCE(payment_outpatient, 0)), 2) AS Avg_Outpatient_Cost,
            ROUND(AVG(COALESCE(payment_inpatient, 0) + COALESCE(payment_outpatient, 0)), 2) AS Total_Avg_Cost
-    FROM beneficiarysummarysample_2010 
+    FROM beneficiarysummarysample_2008 
     WHERE copd = 1 
     GROUP BY Status
 
@@ -77,7 +77,7 @@ CREATE OR REPLACE VIEW Mortality_analysis_View10 AS
            ROUND(AVG(COALESCE(payment_inpatient, 0)), 2) AS Avg_Inpatient_Cost,
            ROUND(AVG(COALESCE(payment_outpatient, 0)), 2) AS Avg_Outpatient_Cost,
            ROUND(AVG(COALESCE(payment_inpatient, 0) + COALESCE(payment_outpatient, 0)), 2) AS Total_Avg_Cost
-    FROM beneficiarysummarysample_2010 
+    FROM beneficiarysummarysample_2008 
     WHERE depression = 1 
     GROUP BY Status
      
@@ -89,7 +89,7 @@ CREATE OR REPLACE VIEW Mortality_analysis_View10 AS
            ROUND(AVG(COALESCE(payment_inpatient, 0)), 2) AS Avg_Inpatient_Cost,
            ROUND(AVG(COALESCE(payment_outpatient, 0)), 2) AS Avg_Outpatient_Cost,
            ROUND(AVG(COALESCE(payment_inpatient, 0) + COALESCE(payment_outpatient, 0)), 2) AS Total_Avg_Cost
-    FROM beneficiarysummarysample_2010 
+    FROM beneficiarysummarysample_2008 
     WHERE ischemic_heart_disease = 1 
     GROUP BY Status
 
@@ -101,7 +101,7 @@ CREATE OR REPLACE VIEW Mortality_analysis_View10 AS
            ROUND(AVG(COALESCE(payment_inpatient, 0)), 2) AS Avg_Inpatient_Cost,
            ROUND(AVG(COALESCE(payment_outpatient, 0)), 2) AS Avg_Outpatient_Cost,
            ROUND(AVG(COALESCE(payment_inpatient, 0) + COALESCE(payment_outpatient, 0)), 2) AS Total_Avg_Cost
-    FROM beneficiarysummarysample_2010 
+    FROM beneficiarysummarysample_2008 
     WHERE osteoporosis = 1 
     GROUP BY Status
 
@@ -113,7 +113,7 @@ CREATE OR REPLACE VIEW Mortality_analysis_View10 AS
            ROUND(AVG(COALESCE(payment_inpatient, 0)), 2) AS Avg_Inpatient_Cost,
            ROUND(AVG(COALESCE(payment_outpatient, 0)), 2) AS Avg_Outpatient_Cost,
            ROUND(AVG(COALESCE(payment_inpatient, 0) + COALESCE(payment_outpatient, 0)), 2) AS Total_Avg_Cost
-    FROM beneficiarysummarysample_2010 
+    FROM beneficiarysummarysample_2008 
     WHERE rheumatoid_arthritis_oa = 1 
     GROUP BY Status
 
@@ -125,6 +125,6 @@ CREATE OR REPLACE VIEW Mortality_analysis_View10 AS
            ROUND(AVG(COALESCE(payment_inpatient, 0)), 2) AS Avg_Inpatient_Cost,
            ROUND(AVG(COALESCE(payment_outpatient, 0)), 2) AS Avg_Outpatient_Cost,
            ROUND(AVG(COALESCE(payment_inpatient, 0) + COALESCE(payment_outpatient, 0)), 2) AS Total_Avg_Cost
-    FROM beneficiarysummarysample_2010 
+    FROM beneficiarysummarysample_2008 
     WHERE stroke = 1 
     GROUP BY Status;
