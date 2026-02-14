@@ -1,1 +1,0 @@
-CREATE INDEX copd_idx ON beneficiarysummarysample_2008 (copd);

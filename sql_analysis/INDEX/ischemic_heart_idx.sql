@@ -1,1 +1,0 @@
-CREATE INDEX ischemic_heart_idx ON beneficiarysummarysample_2008 (ischemic_heart_disease);

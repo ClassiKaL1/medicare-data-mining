@@ -1,1 +1,0 @@
-CREATE INDEX state_code_idx ON beneficiarysummarysample_2008 (state_code);

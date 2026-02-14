@@ -1,1 +1,0 @@
-CREATE INDEX death_date_idx ON beneficiarysummarysample_2008 (death_date);

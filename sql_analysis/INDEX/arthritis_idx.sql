@@ -1,1 +1,0 @@
-CREATE INDEX arthritis_idx ON beneficiarysummarysample_2008 (rheumatoid_arthritis_oa);

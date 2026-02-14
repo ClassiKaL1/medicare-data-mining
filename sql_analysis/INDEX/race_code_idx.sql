@@ -1,1 +1,0 @@
-CREATE INDEX race_code_idx ON beneficiarysummarysample_2008 (race_code);

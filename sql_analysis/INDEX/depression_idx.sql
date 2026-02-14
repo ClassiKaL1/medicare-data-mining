@@ -1,1 +1,0 @@
-CREATE INDEX depression_idx ON beneficiarysummarysample_2008 (depression);
