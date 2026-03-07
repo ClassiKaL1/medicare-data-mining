@@ -6,13 +6,6 @@ DELIMITER $$
 
 CREATE PROCEDURE POPULATE_ALL_TABLES(IN target_year INT)
 BEGIN
-    
-    INSERT INTO GENDERS (GENDER_CODE, DESCRIPTION)
-    SELECT DISTINCT gender_code,
-        CASE WHEN gender_code = 1 THEN 'Male' WHEN gender_code = 2 THEN 'Female' ELSE 'Unknown' END
-    FROM temp_staging t
-    WHERE t.gender_code IS NOT NULL 
-      AND NOT EXISTS (SELECT 1 FROM GENDERS g WHERE g.GENDER_CODE = t.gender_code);
 
     INSERT INTO RACES (RACE_CODE, DESCRIPTION)
     SELECT DISTINCT race_code,
@@ -20,12 +13,6 @@ BEGIN
     FROM temp_staging t
     WHERE t.race_code IS NOT NULL 
       AND NOT EXISTS (SELECT 1 FROM RACES r WHERE r.RACE_CODE = t.race_code);
-
-    INSERT INTO STATES (STATE_CODE, STATE_NAME)
-    SELECT DISTINCT state_code, state_code
-    FROM temp_staging t
-    WHERE t.state_code IS NOT NULL 
-      AND NOT EXISTS (SELECT 1 FROM STATES s WHERE s.STATE_CODE = t.state_code);
 
     INSERT INTO COUNTIES (COUNTY_CODE, COUNTY_NAME, STATE_CODE)
     SELECT DISTINCT county_code, county_code, state_code
